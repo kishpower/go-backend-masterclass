@@ -3,3 +3,5 @@
 - created docker compose
 - create migrate up and down sql files
 - create makeFile 
+- sqlc yaml , queries , gencode 
+
