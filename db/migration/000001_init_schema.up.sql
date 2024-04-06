@@ -14,7 +14,7 @@
 
 -- Table entries {
 --     id bigserial [pk]
---     account_id bigint [ref: > A.id] -- foreign key
+--     account_id bigint [ref: > A.id, not null] -- foreign key
 --     amount bigint [not null , note : 'it can be negative or positive']
 --     created_at timestamptz [not null , default : `now()`]
 
@@ -25,8 +25,8 @@
 
 -- Table transfers {
 --     id bigserial [pk]
---     from_account_id bigint [ref : > A.id]
---     to_account_id bigint [ref : > A.id]
+--     from_account_id bigint [ref : > A.id, not nul]
+--     to_account_id bigint [ref : > A.id , not null]
 --     amount bigint [not null , note : 'it must be positve']
 --     created_at timestamptz [not null, default : `now()`]
 
@@ -55,15 +55,15 @@ CREATE TABLE "accounts" (
 
 CREATE TABLE "entries" (
   "id" bigserial PRIMARY KEY,
-  "account_id" bigint,
+  "account_id" bigint NOT NULL,
   "amount" bigint NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "transfers" (
   "id" bigserial PRIMARY KEY,
-  "from_account_id" bigint,
-  "to_account_id" bigint,
+  "from_account_id" bigint NOT NULL,
+  "to_account_id" bigint NOT NULL,
   "amount" bigint NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT (now())
 );

@@ -17,8 +17,3 @@ ORDER BY id
 LIMIT $2
 OFFSET $3
 ;
-
--- name: UpdateEntry :exec
-UPDATE entries
-  set amount = $2
-WHERE id = $1;

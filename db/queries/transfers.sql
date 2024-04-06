@@ -20,8 +20,3 @@ ORDER BY id
 LIMIT $3
 OFFSET $4
 ;
-
--- name: UpdateTransfer :exec
-UPDATE transfers 
-  set amount = $2
-WHERE id = $1;
