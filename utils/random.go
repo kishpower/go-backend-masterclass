@@ -3,14 +3,9 @@ package utils
 import (
 	"math/rand"
 	"strings"
-	"time"
 )
 
 const alphabets = "abcdefghijklmnopqrstuvwxyz"
-
-func init() {
-	rand.Seed(time.Now().Unix())
-}
 
 // returns a random integer between min and max
 func RandomInt(min int64, max int64) int64 {
