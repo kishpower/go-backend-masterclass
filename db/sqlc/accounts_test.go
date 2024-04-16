@@ -10,6 +10,9 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+// create random function
+
+
 func createRandomAccount(t *testing.T) Account {
 	args := CreateAccountParams{
 		Balance:  utils.RandomMoney(),
@@ -47,6 +50,8 @@ func TestGetAccount(t *testing.T) {
 	require.Equal(t, acc1.Balance, acc2.Balance)
 	require.WithinDuration(t, acc1.CreatedAt, acc2.CreatedAt, time.Second)
 }
+
+// generate fib sequence
 
 func TestUpdateAccount(t *testing.T) {
 	acc1 := createRandomAccount(t)
