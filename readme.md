@@ -10,5 +10,5 @@ source - [GitHub repo](https://github.com/techschool/simplebank/tree/master)
 - create db/store to add transaction capabalities to db (currently we only support queries)
 - create test file for store
 - handle deadlocks for concurrent transactions
-- implement restful http api using Gin
-
+- implement restful http api using Gin for accounts , entry , transfer etc
+- install viper to manage config files
