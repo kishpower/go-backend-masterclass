@@ -22,4 +22,9 @@ test:
 server:
 	go run main.go
 
+mock:
+ 	# uses reflection to create mocks
+	mockgen -package mockdb -destination db/mock/store.go github.com/kishpower/simplebank/db/sqlc Store
+
+
 .PHONY: postgres createdb dropdb migrateup migratedown sqlc test server

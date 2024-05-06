@@ -12,3 +12,5 @@ source - [GitHub repo](https://github.com/techschool/simplebank/tree/master)
 - handle deadlocks for concurrent transactions
 - implement restful http api using Gin for accounts , entry , transfer etc
 - install viper to manage config files
+- install mockgen to mock database (writing tests for api)
+
